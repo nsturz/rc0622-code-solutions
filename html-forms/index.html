@@ -5,11 +5,11 @@
   </head>
   <body>
     <h1>Coding Form!</h1>
-    <form action="">
+    <form>
       <div>
         <label for="email">Email</label>
       </div>
-      <input type="text" id="Email">
+      <input type="text" id="email">
       <div>
         <label for="dropdown">Why is coding cool?</label>
       </div>
@@ -21,21 +21,31 @@
           <option value="">Because it's powerful</option>
         </select>
       </div>
-      <div>
-        <p>Favorite language (choose one)</p>
-      </div>
-      <input type="radio" value="HTML"> HTML
-      <input type="radio" value="CSS"> CSS
-      <input type="radio" value="JavaScript"> JavaScript
+      <p>Favorite language (choose one)</p>
+      <label>
+        <input type="radio" value="HTML">
+        HTML
+      </label>
+      <label>
+        <input type="radio" value="CSS">
+        CSS
+      </label>
+      <label>
+        <input type="radio" value="JavaScript">
+        JavaScript
+      </label>
       <div>
         <p>Would you like to sign up for more information?</p>
       </div>
-      <input type="checkbox"> Sign me up!
+      <label>
+        <input type="checkbox" id="would-you-like">
+        Sign me up!
+      </label>
       <div>
-        <label for="commentary">Comments</label>
+        <label for="comments">Comments</label>
       </div>
       <div>
-        <textarea name="commentary" id="commentary" cols="30" rows="10"></textarea>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
       </div>
       <button>Submit</button>
     </form>
