@@ -17,9 +17,6 @@ img {
   width: 100%;
 }
 
-.column-one-fourth,
-.column-two-fourths,
-.column-three-fourths,
-.column-four-fourths {
-  width: 30%;
+.column-one-fourth {
+  width: 25%;
 }
