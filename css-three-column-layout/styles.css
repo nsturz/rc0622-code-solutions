@@ -42,8 +42,8 @@ h3 {
   justify-content: space-around;
 }
 
-.one-third {
-  padding-left: 2%;
+.column-one-third {
+  flex-basis: auto%;
 }
 
 .circle {
