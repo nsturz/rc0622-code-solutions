@@ -43,7 +43,7 @@ h3 {
 }
 
 .column-one-third {
-  flex-basis: auto%;
+  flex-basis: 33%;
 }
 
 .circle {
