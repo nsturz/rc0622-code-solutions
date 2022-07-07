@@ -1,0 +1,12 @@
+.container {
+  max-width: 1000px;
+}
+
+.column-full,
+.column-one-of-five {
+  flex-basis: auto;
+}
+
+.row {
+  display: flex;
+}
