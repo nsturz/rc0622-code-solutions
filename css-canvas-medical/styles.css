@@ -49,9 +49,7 @@ hr {
 }
 
 nav {
-  padding-right: 90px;
-  padding-top: 20px;
-  left: 25%;
+  right: 5%;
 }
 
 .absolute {
@@ -96,6 +94,14 @@ nav {
   padding-top: 20px;
 }
 
+.column-one-third {
+  flex-basis: 33%;
+}
+
+.column-two-third {
+  flex-basis: 67%;
+}
+
 .color-white {
   color: #fcfcfc;
 }
@@ -110,7 +116,7 @@ nav {
   font-size: 10px;
 }
 
-.flex {
+.row {
   display: flex;
 }
 
@@ -146,8 +152,12 @@ nav {
   height: 360px;
 }
 
-.justify-content {
+.justify-center {
   justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .learn-more {
@@ -159,17 +169,14 @@ nav {
   width: 100px;
 }
 
-.logo-blue-padding {
-  padding-left: 85px;
-  padding-top: 20px;
+.logo-blue {
+  width: 100px;
+  top: 50%;
+  left: 20%;
 }
 
 .margin-auto {
   margin: auto;
-}
-
-.nav-text {
-  padding-right: 20px;
 }
 
 .product {
