@@ -5,6 +5,7 @@ body {
 p {
   font-weight: lighter;
   font-size: 12px;
+  margin-top: 0;
 }
 
 button {
@@ -13,18 +14,23 @@ button {
   background: none;
   border-style: solid;
   border-color: #d14c45;
-  border-width: 2px;
+  border-width: 1px;
   color: #d14c45;
   font-family: Karla, sans-serif;
+  font-size: 11px;
+  margin-top: 20%;
 }
 
 img {
-  width: 60%;
-  margin-bottom: 50%;
+  width: 70%;
+  position: relative;
+  left: 27%;
+  bottom: 8%;
 }
 
 h1 {
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+  font-size: 40px;
 }
 
 h3 {
@@ -35,8 +41,15 @@ h3 {
   max-width: 800px;
 }
 
-.column-full,
-.column-one-half {
+.column-one-fourth {
+  flex-basis: auto;
+}
+
+.column-one-third {
+  flex-basis: 33%;
+}
+
+.column-two-thirds {
   flex-basis: auto;
 }
 
@@ -48,20 +61,16 @@ h3 {
   margin: auto;
 }
 
-.justify-content {
-  justify-content: center;
+.margin-top {
+  margin-top: 5%;
 }
 
-.justify-content-right {
-  justify-content: right;
+.justify-center {
+  justify-content: center;
 }
 
 .wrap {
   flex-wrap: wrap;
-}
-
-.margin-top {
-  margin-top: 5%;
 }
 
 .font {
