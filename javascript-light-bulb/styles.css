@@ -1,0 +1,35 @@
+button:hover {
+  cursor: pointer;
+}
+
+.container {
+  height: 100vh;
+  margin: auto;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-style: none;
+  position: relative;
+  left: 40%;
+  top: 35%;
+}
+
+.background-off {
+  background-color: #111;
+}
+
+.background-on {
+  background-color: #fef9f1;
+}
+
+.button-off {
+  background-color: #252525;
+}
+
+.button-on {
+  background-color: #faea84;
+  box-shadow: 5px 5px 15px #fc7f43;
+}
