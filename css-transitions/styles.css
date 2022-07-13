@@ -27,7 +27,6 @@ section {
 
 .custom-button:hover {
   background-color: red;
-  transition-duration: 0.5s;
 }
 
 .card-wrapper {
@@ -48,7 +47,6 @@ section {
 
 .card:hover {
   transform: scale(1.1);
-  transition-duration: 0.5s;
 }
 
 .card > img {
