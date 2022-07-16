@@ -1,0 +1,82 @@
+body {
+  font-family: Karla, sans-serif;
+}
+
+p {
+  font-weight: lighter;
+  font-size: 12px;
+  margin-top: 0;
+}
+
+button {
+  width: 9rem;
+  height: 2rem;
+  background: none;
+  border-style: solid;
+  border-color: #d14c45;
+  border-width: 1px;
+  color: #d14c45;
+  font-family: Karla, sans-serif;
+  font-size: 11px;
+  margin-top: 20%;
+}
+
+img {
+  width: 70%;
+  position: relative;
+  left: 27%;
+  bottom: 8%;
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 12px;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.column-one-fourth {
+  flex-basis: auto;
+}
+
+.column-one-third {
+  flex-basis: 33%;
+}
+
+.column-two-thirds {
+  flex-basis: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.margin-top {
+  margin-top: 5%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.font {
+  color: #4c4c4c;
+}
+
+.line-height {
+  line-height: 20px;
+}
