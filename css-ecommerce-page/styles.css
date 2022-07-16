@@ -1,0 +1,67 @@
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 80%;
+}
+
+header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+span {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.column-one-fifth {
+  flex-basis: 20%;
+}
+
+.row {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+}
+
+.object-fit {
+  object-fit: cover;
+}
+
+.span-dark {
+  font-weight: bolder;
+}
+
+.span-light {
+  color: #dbdbdb;
+  padding-left: 3%;
+}
+
+.price {
+  background-color: #f6e9df;
+}
+
+.margin-top {
+  margin-top: 8px;
+}
+
+.margin {
+  margin: 1%;
+}
+
+.space-between {
+  justify-content: space-between;
+}
