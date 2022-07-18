@@ -57,26 +57,26 @@ var pokedex = [
   }
 ];
 
-/* function renderPokemon(pokemon) {
+function renderPokemon(pokemon) {
   var oneThird = document.createElement('div');
   oneThird.className = 'column-one-third';
   var pokemonCard = document.createElement('div');
   pokemonCard.className = 'pokemon-card';
   oneThird.appendChild(pokemonCard);
   var img = document.createElement('img');
-  img.setAttribute('src', '');
+  img.setAttribute('src', pokemon.imageUrl);
   pokemonCard.appendChild(img);
   var pokemonCardText = document.createElement('div');
   pokemonCardText.className = 'pokemon-card-text';
   pokemonCard.appendChild(pokemonCardText);
   var pokemonType = document.createElement('h2');
-  pokemonType.textContent = '';
+  pokemonType.textContent = pokemon.name;
   pokemonCardText.appendChild(pokemonType);
   var pokemonNumber = document.createElement('h3');
-  pokemonNumber.textContent = '';
+  pokemonNumber.textContent = pokemon.number;
   pokemonCardText.appendChild(pokemonNumber);
   var description = document.createElement('p');
-  description.textContent = '';
+  description.textContent = pokemon.description;
   pokemonCardText.appendChild(description);
 
   return oneThird;
@@ -84,6 +84,5 @@ var pokedex = [
 
 var row = document.querySelector('.row');
 for (var i = 0; i < pokedex.length; i++) {
-  var pokemon = renderPokemon(pokedex[i]);
-  row.appendChild(pokemon);`
-} */
+  row.appendChild(renderPokemon(i));
+}
