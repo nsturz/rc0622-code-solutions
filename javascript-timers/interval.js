@@ -1,25 +1,19 @@
-// you need to somehow make the counter variable NOT get
-// reset every time the function calls
-
-function countDown() {
+function beginCountDown() {
   var h1 = document.querySelector('h1');
-  var counter = 4;
-  if (counter === 4) {
-    counter--;
+  if (h1.textContent === '4') {
     var three = h1.textContent = '3';
     return three;
-  } else if (counter === 3) {
+  } else if (h1.textContent === '3') {
     var two = h1.textContent = '2';
-    counter--;
     return two;
-  } else if (counter === 2) {
+  } else if (h1.textContent === '2') {
     var one = h1.textContent = '1';
-    counter--;
     return one;
-  } else if (counter === 1) {
+  } else if (h1.textContent === '1') {
     var earthBelow = h1.textContent = '~Earth Beeeellooww Us~';
     return earthBelow;
   }
+
 }
 
-setInterval(countDown, 1000);
+setInterval(beginCountDown, 1000);
