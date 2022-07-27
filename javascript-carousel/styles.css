@@ -1,0 +1,41 @@
+.align-items {
+  align-items: center;
+}
+
+.angle {
+  position: relative;
+  top: 5em;
+}
+
+.column-full {
+  width: 50%;
+}
+
+.content-wrapper {
+  height: 100%;
+}
+
+i {
+  margin: 1rem;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+main {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
