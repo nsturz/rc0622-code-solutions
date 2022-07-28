@@ -12,9 +12,13 @@ function beginCountDown() {
   } else if (h1.textContent === '1') {
     var earthBelow = h1.textContent = '~Earth Beeeellooww Us~';
     return earthBelow;
+  } else if (h1.textContent === '~Earth Beeeellooww Us~') {
+    clear();
   }
-
 }
 
-setInterval(beginCountDown, 1000);
-clearInterval(2);
+function clear() {
+  clearInterval(interval);
+}
+
+var interval = setInterval(beginCountDown, 1000);
