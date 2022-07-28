@@ -17,3 +17,4 @@ function beginCountDown() {
 }
 
 setInterval(beginCountDown, 1000);
+clearInterval(2);
