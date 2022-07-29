@@ -19,6 +19,10 @@ i {
   margin: 1rem;
 }
 
+i:hover {
+  cursor: pointer;
+}
+
 img {
   width: auto;
   height: auto;
@@ -28,8 +32,16 @@ img {
   justify-content: center;
 }
 
+.left:hover {
+  cursor: pointer;
+}
+
 main {
   margin: auto;
+}
+
+.right:hover {
+  cursor: pointer;
 }
 
 .row {

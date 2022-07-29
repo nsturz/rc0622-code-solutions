@@ -5,8 +5,9 @@ var dot3 = document.getElementById('dot-3');
 var dot4 = document.getElementById('dot-4');
 var dot5 = document.getElementById('dot-5');
 var image = document.querySelector('img');
-// var leftButton = document.getElementById('left-button');
-// var rightButton = document.getElementById('right-button');
+var leftButton = document.getElementById('left-button');
+var rightButton = document.getElementById('right-button');
+var dotContainer = document.getElementById('dot-container');
 
 function dotSwap(pokemon) {
   if (pokemon === 'bulbasaur') {
@@ -43,41 +44,84 @@ function dotSwap(pokemon) {
 }
 
 function photoSwap(pokemon) {
-
   if (
-    image.getAttribute('src') === 'images/001.png' || pokemon === 'charmander') {
+    pokemon === 'charmander' || image.getAttribute('src') === 'images/001.png') {
     image.setAttribute('src', 'images/004.png');
     dotSwap('charmander');
   } else if (
-    image.getAttribute('src') === 'images/004.png' || pokemon === 'squirtle') {
+    pokemon === 'squirtle' || image.getAttribute('src') === 'images/004.png') {
     image.setAttribute('src', 'images/007.png');
     dotSwap('squirtle');
   } else if (
-    image.getAttribute('src') === 'images/007.png' || pokemon === 'pikachu') {
+    pokemon === 'pikachu' || image.getAttribute('src') === 'images/007.png') {
     image.setAttribute('src', 'images/025.png');
     dotSwap('pikachu');
   } else if (
-    image.getAttribute('src') === 'images/025.png' || pokemon === 'jigglypuff') {
+    pokemon === 'jigglypuff' || image.getAttribute('src') === 'images/025.png') {
     image.setAttribute('src', 'images/039.png');
     dotSwap('jigglypuff');
   } else if (
-    image.getAttribute('src') === 'images/039.png' || pokemon === 'bulbasaur') {
+    pokemon === 'bulbasaur' || image.getAttribute('src') === 'images/039.png') {
     image.setAttribute('src', 'images/001.png');
     dotSwap('bulbasaur');
   }
 }
 
-// function clear() {
-//   clearInterval(interval);
-// }
+leftButton.addEventListener('click', function (event) {
+  if (image.getAttribute('src') === 'images/039.png') {
+    photoSwap('pikachu');
+  } else if (image.getAttribute('src') === 'images/025.png') {
+    photoSwap('squirtle');
+  } else if (image.getAttribute('src') === 'images/007.png') {
+    photoSwap('charmander');
+  } else if (image.getAttribute('src') === 'images/004.png') {
+    image.setAttribute('src', 'images/001.png');
+    dotSwap('bulbasaur');
+  } else if (image.getAttribute('src') === 'images/001.png') {
+    image.setAttribute('src', 'images/039.png');
+    dotSwap('jigglypuff');
+  } clear();
+});
 
-// leftButton.addEventListener('click', function (event) {
-//   clear();
+rightButton.addEventListener('click', function (event) {
+  clear();
+  if (image.getAttribute('src') === 'images/039.png') {
+    photoSwap('bulbasaur');
+  } else if (image.getAttribute('src') === 'images/001.png') {
+    image.setAttribute('src', 'images/004.png');
+    dotSwap('charmander');
+  } else if (image.getAttribute('src') === 'images/004.png') {
+    photoSwap('squirtle');
+  } else if (image.getAttribute('src') === 'images/007.png') {
+    photoSwap('pikachu');
+  } else if (image.getAttribute('src') === 'images/025.png') {
+    photoSwap('jigglypuff');
+  }
+});
 
-// });
+dotContainer.addEventListener('click', function (event) {
+  clear();
+  if (event.target === dot1) {
+    image.setAttribute('src', 'images/001.png');
+    dotSwap('bulbasaur');
+  } else if (event.target === dot2) {
+    photoSwap('charmander');
+  } else if (event.target === dot3) {
+    photoSwap('squirtle');
+  } else if (event.target === dot4) {
+    photoSwap('pikachu');
+  } else if (event.target === dot5) {
+    photoSwap('jigglypuff');
+  }
+});
 
-photoSwap('squirtle');
-// var interval = setInterval(photoSwap, 3000);
-// console.log(setInterval(photoSwap, 3000));
+var interval;
+function carousel() {
+  interval = setInterval(photoSwap, 3000);
+}
+carousel();
 
-// console.log(image.getAttribute('src'));
+function clear() {
+  clearInterval(interval);
+  interval = setTimeout(carousel, 3000);
+}
