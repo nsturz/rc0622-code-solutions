@@ -1,0 +1,53 @@
+.align-items {
+  align-items: center;
+}
+
+.angle {
+  position: relative;
+  top: 5em;
+}
+
+.column-full {
+  width: 50%;
+}
+
+.content-wrapper {
+  height: 100%;
+}
+
+i {
+  margin: 1rem;
+}
+
+i:hover {
+  cursor: pointer;
+}
+
+img {
+  width: auto;
+  height: auto;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.left:hover {
+  cursor: pointer;
+}
+
+main {
+  margin: auto;
+}
+
+.right:hover {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
