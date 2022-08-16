@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ES6 Destructuring</title>
+  </head>
+  <body>
+    <script>
+      const book1 = {
+  title: 'The Silmarillion',
+  author: 'J.R.R. Tolkien',
+  libraryID: 562
+};
+
+const { title, author, libraryID } = book1;
+
+console.log(`The title of the book is ${title}, the author is ${author}, and the
+library ID is ${libraryID}`);
+
+const book2 = {
+  title: 'The Fellowship Of The Ring',
+  author: 'J.R.R. Tolkien',
+  libraryID: 563
+};
+
+const { title: newTitle, author: newAuthor, libraryID: newLibraryID } = book2;
+console.log(`The title of the book is ${newTitle}, the author is ${newAuthor}, and the
+library ID is ${newLibraryID}`);
+
+const library = [
+  {
+    title: 'Monster',
+    author: 'Sanyika Shakur',
+    libraryID: 213
+
+  },
+  {
+    title: 'A Game Of Thrones',
+    author: 'George R.R. Martin',
+    libraryID: 777
+  },
+  {
+    title: 'A Peoples Guide To Capitalism',
+    author: 'Hadas Thier',
+    libraryID: 1014
+  },
+  {
+    title: 'Stick Control for the Modern Snare Drummer',
+    author: 'George Lawrence Stone',
+    libraryID: 725
+  }
+];
+
+const [book3, book4, book5] = library;
+
+console.log('book 3:', book3);
+console.log('book 4:', book4);
+console.log('book 5', book5);
+const [, , , book6] = library;
+console.log('book 6:', book6);
+    </script>
+  </body>
+</html>
