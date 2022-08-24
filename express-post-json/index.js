@@ -13,7 +13,9 @@ app.listen(3000, () => {
 
 app.get('/api/grades', (req, res) => {
   const studentGrades = [];
-  studentGrades.push(grades);
+  for (const keys in grades) {
+    studentGrades.push(grades[keys]);
+  }
   res.json(studentGrades);
 });
 
@@ -22,8 +24,8 @@ const expressJSON = express.json();
 app.use(expressJSON);
 
 app.post('/api/grades', (req, res) => {
-  res.status(201);
-  nextId++;
   req.body.id = nextId;
-  res.json(req.body);
+  nextId++;
+  grades[req.body.id] = req.body;
+  res.status(201).json(req.body);
 });
