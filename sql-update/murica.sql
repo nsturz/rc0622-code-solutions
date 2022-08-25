@@ -1,3 +1,3 @@
-insert into "countries" ("name")
-values ('United States')
-returning *;
+update "countries"
+set "name" = 'Murica'
+where "countryId" = '103';
