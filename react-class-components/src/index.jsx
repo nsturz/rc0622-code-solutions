@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-class CustomButton extends React.component {
+class CustomButton extends React.Component {
   render() {
     return (
       <button>{this.props.text}</button>
