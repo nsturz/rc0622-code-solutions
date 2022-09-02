@@ -4,6 +4,7 @@ button {
   width: 50px;
   height: 50px;
   background-color: white;
+  border: 1px solid black;
 }
 
 .container-off {
@@ -14,23 +15,30 @@ button {
   background-color: #6aa74f;
 }
 
-div {
-  border-top-left-radius: 25%;
-  border-bottom-left-radius: 25%;
-  border-top-right-radius: 25%;
-  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
-  border-bottom-right-radius: 25%;
+.delay {
+  transition-duration: 500ms;
+}
 
-  /* border-radius: 50%; */
+div {
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  border-bottom-right-radius: 25px;
   width: 100px;
   height: 50px;
 }
 
 .flex {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .hidden {
   display: none;
+}
+
+.on-button {
+  position: relative;
+  left: 50%;
 }
