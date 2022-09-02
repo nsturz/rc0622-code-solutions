@@ -18,6 +18,11 @@ button:hover {
   color: white;
 }
 
+.dead {
+  background-color: black;
+  color: white;
+}
+
 .hot {
   background-color: #f6b26a;
   color: black;

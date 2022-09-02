@@ -5,17 +5,7 @@ export default class HotButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { click: 0 };
-    this.changeColors = this.changeColors.bind(this);
     this.increment = this.increment.bind(this);
-  }
-
-  changeColors() {
-    const click = this.state.click;
-    if (click <= 3) {
-      return 'cold';
-    } else if (click > 3 && click <= 6) {
-      return 'cool';
-    }
   }
 
   increment() {
@@ -23,9 +13,24 @@ export default class HotButton extends React.Component {
   }
 
   render() {
+    let className = 'dead';
+    const click = this.state.click;
+    if (click > 2 && click <= 5) {
+      className = 'cold';
+    } else if (click > 5 && click <= 8) {
+      className = 'cool';
+    } else if (click > 8 && click <= 11) {
+      className = 'warm';
+    } else if (click > 11 && click <= 14) {
+      className = 'hot';
+    } else if (click > 14 && click <= 17) {
+      className = 'very-hot';
+    } else if (click > 17) {
+      className = 'insane';
+    }
     return (
-      // eslint-disable-next-line no-console
-      <button className={this.changeColors} onClick={this.increment}>Hot Button</button>
+        <button className={className} onClick={this.increment}>Hot Button</button>
     );
+
   }
 }
