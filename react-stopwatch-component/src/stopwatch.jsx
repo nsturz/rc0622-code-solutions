@@ -1,3 +1,5 @@
+// 9.2.22 - need to figure out why the cosole doesnt like the setState method
+// on line 13
 import React from 'react';
 
 export default class Stopwatch extends React.Component {
