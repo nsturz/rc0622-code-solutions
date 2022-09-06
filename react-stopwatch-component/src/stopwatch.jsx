@@ -1,37 +1,60 @@
-// 9.2.22 - need to figure out why the cosole doesnt like the setState method
-// on line 13
 import React from 'react';
-
 export default class Stopwatch extends React.Component {
   constructor(props) {
     super(props);
     this.state = { timer: 0, click: 1 };
-    this.state.increment = this.increment.bind(this);
+    this.incrementClick = this.incrementClick.bind(this);
+    this.startTimer = this.startTimer.bind(this);
+    this.stopTimer = this.stopTimer.bind(this);
+    this.resetCount = this.resetCount.bind(this);
+    this.tick = this.tick.bind(this);
   }
 
-  increment() {
+  startTimer() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  stopTimer() {
+    clearInterval(this.timerID);
+  }
+
+  incrementClick() {
     this.setState({ click: this.state.click + 1 });
+  }
+
+  resetCount() {
+    if (this.state.click % 2 === 1) {
+      this.setState({ timer: 0 });
+    }
+  }
+
+  tick() {
+    this.setState({
+      timer: this.state.timer + 1
+    });
   }
 
   render() {
     const click = this.state.click;
-    // eslint-disable-next-line no-console
-    console.log(click);
     let playButton = 'fa solid fa-play play-button';
     let pauseButton = 'fa-solid fa-pause pause-button hidden';
+    this.stopTimer();
     if (click % 2 === 0) {
       playButton = 'fa-solid fa-play play-button hidden';
       pauseButton = 'fa-solid fa-pause pause-button';
-
+      this.startTimer();
     }
     return (
       <div>
-        <div className="container">
-          <p className="number">{this.state.timer}</p>
+        <div className="container" onClick={this.resetCount}>
+          <p className="number" id="number">{this.state.timer}</p>
         </div>
         <div className="icon-wrapper">
-          <i className={playButton} onClick={this.increment}></i>
-          <i className={pauseButton} onClick={this.increment}></i>
+          <i className={playButton} onClick={this.incrementClick}></i>
+          <i className={pauseButton} onClick={this.incrementClick}></i>
         </div>
       </div>
     );

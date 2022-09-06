@@ -8,6 +8,10 @@
   align-items: center;
 }
 
+.container:hover {
+  cursor: pointer;
+}
+
 .hidden {
   display: none;
 }
