@@ -85,6 +85,16 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
+    // left off here 9/8/22 👇🏼
+  //   for (let i = 0; i < this.state.todos.length; i++) {
+  //     if (this.state.todos[i].todoId === todoId) {
+  //       const isCompleted = this.state.todos[i].isCompleted;
+  //       const newObj = {
+  //         opposite: !isCompleted
+  //       };
+  //       fetch('/api/todos')
+  //     }
+  //   }
   }
 
   render() {
