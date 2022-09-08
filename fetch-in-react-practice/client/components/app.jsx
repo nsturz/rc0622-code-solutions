@@ -52,12 +52,14 @@ export default class App extends React.Component {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify()
+      body: JSON.stringify(newTodo)
     })
       .then(response => response.json())
-      .then(todos => this.setState({
-        todos: [this.newToDo] // <- 👀 not sure if this is right
-      }))
+      .then(todos => {
+        this.setState({
+          todos: this.state.todos.concat(todos)
+        });
+      })
       .catch(console.error);
   }
 
