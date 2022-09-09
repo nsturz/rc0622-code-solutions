@@ -49,7 +49,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
   }
 
   /* your code starts here */
-  // argon2
+  // argon2 left off here 9/9/22 👀
   //   .hash(password)
   //   .then((hashedPassword, userId) => {
 
@@ -58,23 +58,22 @@ app.post('/api/auth/sign-in', (req, res, next) => {
   //             "hashedPassword"
   //     from "users"
   //     order by "username"
-
   //     `;
   //     const params = [username, password];
   //     return db.query(sql, params)
-  //       .then(user => {
-  //         if (!user) {
+  //       .then(username => {
+  //         if (!username) {
   //           throw new ClientError(401, 'invalid login');
   //         }
-  //         argon2.verify(req.body.password === hashedPassword)
+  //         argon2.verify(hashedPassword, password)
   //           .then(password => {
   //             if (!password) {
   //               throw new ClientError(401, 'invalid login');
   //             }
   //           });
   //         const payload = {
-  //           userId,
-  //           username: req.body.username
+  //           userId: req.body.userId,
+  //           username: req.body.userName
   //         };
   //         const token = jwt.sign(payload, TOKEN_SECRET => {
 
