@@ -86,15 +86,25 @@ export default class App extends React.Component {
      * And specify the "Content-Type" header as "application/json"
      */
     // left off here 9/8/22 👇🏼
-  //   for (let i = 0; i < this.state.todos.length; i++) {
-  //     if (this.state.todos[i].todoId === todoId) {
-  //       const isCompleted = this.state.todos[i].isCompleted;
-  //       const newObj = {
-  //         opposite: !isCompleted
-  //       };
-  //       fetch('/api/todos')
-  //     }
-  //   }
+    const completed = this.state.todos.find(todo => {
+      return todo.todoId;
+    });
+    fetch(`/api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ isCompleted: !completed.isCompleted })
+    })
+      .then(response => response.json())
+      .then(updated => {
+        const allTodos = this.state.todos.map(original => {
+          return original.todoId === updated.todoId
+            ? updated
+            : original;
+        });
+        this.setState({ todos: allTodos });
+      });
   }
 
   render() {
