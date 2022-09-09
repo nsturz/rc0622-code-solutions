@@ -84,7 +84,7 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   const { name, course } = req.body;
   const score = Number(req.body.score);
   if (!Number.isInteger(score) || score < 0 || score > 100) {
-    throw ClientError(400, 'score must be an integer between 0 and 100');
+    throw new ClientError(400, 'score must be an integer between 0 and 100');
   }
   if (!name || !course) {
     throw new ClientError(400, 'name, course, and score are required fields');
