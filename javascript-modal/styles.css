@@ -5,8 +5,27 @@
 
 .column-full {
   border-style: solid;
-  position: relative;
-  top: 50%;
+  position: absolute;
+  top: 40%;
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.button {
+  margin: 1rem;
+  width: 30%;
+  font-size: 2rem;
+  border-style: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #e93b2f;
 }
 
 .row {
@@ -19,4 +38,16 @@
 
 .justify-left {
   justify-content: left;
+}
+
+.overlay {
+  background: black;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
