@@ -5,16 +5,16 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="overlay"></div>
+    <div class="overlay hidden" id="overlay"></div>
     <div class="container">
-      <div class="row">
-        <button class="button">Open Modal</button>
+      <div class="row justify-left">
+        <button class="button" id="modal-button">Open Modal</button>
       </div>
-      <div class="row justify-center">
+      <div class="row justify-center hidden" id="survey-modal">
         <div class="column-full">
-          <h4 class="text-center">Would you like to take a survey?</h4>
+          <h2 class="text-center">Would you like to take a survey?</h2>
           <div class="row justify-center">
-            <button class="button">NO</button>
+            <button class="button" id="no-button">NO</button>
           </div>
         </div>
       </div>
