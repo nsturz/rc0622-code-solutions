@@ -1,0 +1,48 @@
+button {
+  border-style: none;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.cold {
+  background-color: #351c74;
+  color: white;
+}
+
+.cool {
+  background-color: #674ea7;
+  color: white;
+}
+
+.dead {
+  background-color: black;
+  color: white;
+}
+
+.hot {
+  background-color: #f6b26a;
+  color: black;
+}
+
+.insane {
+  background-color: white;
+  color: black;
+}
+
+.warm {
+  background-color: #e06666;
+  color: white;
+}
+
+.very-hot {
+  background-color: #ff0;
+  color: black;
+}
+
+.relative {
+  left: 50%;
+}
