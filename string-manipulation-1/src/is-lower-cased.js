@@ -13,5 +13,6 @@ function isLowerCased(word) {
     return true;
   } else {
     return false;
+
   }
 }

@@ -8,5 +8,6 @@ function isUpperCased(word) {
     return true;
   } else {
     return false;
+
   }
 }
