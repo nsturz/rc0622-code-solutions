@@ -6,4 +6,5 @@ we then need to return it from the functions code block
 */
 function getFirstChar(string) {
   return string[0];
+
 }

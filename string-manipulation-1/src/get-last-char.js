@@ -9,4 +9,5 @@ a vairable.
 function getLastChar(string) {
   var lastChar = string.slice(string.length - 1);
   return lastChar;
+
 }

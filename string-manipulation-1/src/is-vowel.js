@@ -16,5 +16,6 @@ function isVowel(char) {
     return true;
   } else {
     return false;
+
   }
 }

@@ -12,5 +12,6 @@ function getWords(string) {
   } else {
     var words = string.split(' ');
     return words;
+
   }
 }
