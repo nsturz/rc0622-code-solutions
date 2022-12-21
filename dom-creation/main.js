@@ -82,9 +82,7 @@ function renderPokemon(pokemon) {
   return oneThird;
 }
 
-// renderPokemon();
-
 var row = document.querySelector('.row');
 for (var i = 0; i < pokedex.length; i++) {
-  row.appendChild(renderPokemon(i));
+  row.appendChild(renderPokemon(pokedex[i]));
 }
