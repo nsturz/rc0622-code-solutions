@@ -13,3 +13,7 @@ body {
 .space {
   width: 0.3rem;
 }
+
+.wrong {
+  color: red;
+}
