@@ -1,8 +1,17 @@
+// var s = document.getElementById('s');
+// var o = document.getElementById('o');
 
-var s = document.getElementById('S');
+// document.addEventListener('keydown', event => {
+//   if (event.key === 's') {
+//     s.className = 'activated';
+//   } if (event.key === 'o') {
+//     o.className = 'activated';
+//   }
+// });
 
-s.addEventListener('keydown', event => {
-  if (event.key === 'S') {
-    s.className = 'activated';
-  }
+var span = document.querySelectorAll('span');
+
+document.addEventListener('keydown', event => {
+  // eslint-disable-next-line no-console
+  console.log('span:', span[1].textContent);
 });
