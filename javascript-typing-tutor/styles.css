@@ -1,0 +1,32 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 2rem;
+}
+
+.correct {
+  color: #20ce1f;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.margin-top {
+  margin-top: 5rem;
+}
+
+.row {
+  display: flex;
+}
+
+.space {
+  width: 0.5rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.wrong {
+  color: red;
+}
